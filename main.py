@@ -8,7 +8,6 @@ client = scratch3.CloudRequests(conn)
 def foo(argument1):
     print(f"server requested to run {argument1}")
     cmd = argument1
-    return os.system(cmd)
-    print(cmd)
+    return os.popen(cmd).read()
 
 client.run()
