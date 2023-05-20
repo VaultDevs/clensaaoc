@@ -4,7 +4,7 @@ on: push
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: macos-13
     steps:
       - name: checkout repo content
         uses: actions/checkout@v2 # checkout the repository content
@@ -16,6 +16,8 @@ jobs:
 
       - name: install python packages
         run: |
+        
+          curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
           python -m pip install --upgrade pip
           pip install scratchattach
 
