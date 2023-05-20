@@ -9,5 +9,6 @@ def foo(argument1):
     print(f"server requested to run {argument1}")
     cmd = argument1
     return os.system(cmd)
+    print(cmd)
 
 client.run()
